@@ -1,4 +1,6 @@
-/* Подключи шрифт тут */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 * {
     margin: 0;
@@ -19,6 +21,9 @@ body {
 
     padding-bottom: 120px;
     margin: 0 auto;
+
+    max-width: 1920px;
+    min-width: 360px;
 
     /* Напиши ограничения тут */
 }
@@ -131,6 +136,32 @@ body {
     list-style-type: none;
     display: flex;
     gap: 50px;
+}
+
+@media screen and (max-wight:1245px){
+    .header__title {
+        font-size: 100px;
+    }
+    
+}
+
+@media screen and (max-wight:768px){
+    .header__nav{
+        display: none;
+    }
+    .header__menu {
+        display: block;
+    }
+    .header__overlay{
+        padding: 40px;
+    }
+    .header__title{
+        font-size: 60px;
+    }
+    .header__subtitle{
+        font-size: 18px;
+    }
+
 }
 
 /* Напиши код ниже */
