@@ -117,6 +117,12 @@ body {
 }
 
 .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px  1fr;
+    gap: 30px;
+    max-width: 1244px;
+    grid-auto-flow: dense;
     
 }
 
@@ -137,7 +143,22 @@ body {
 
 
 
+.first{
+    grid-row: span 2;
 
+}
+
+.second{
+    grid-column: span 2 ;
+}
+
+.forth{
+    grid-row: span 2 ;
+}
+
+.fifth {
+    grid-column: span 2 ;
+}
 .second::after,
 .sixth::after,
 .eleventh::after,
@@ -193,6 +214,22 @@ body {
     .header__title {
         font-size: 100px;
     }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(9, 426px);
+    }
+
+    .gallery__card {
+        grid-row: span 1;
+        grid-column: span 2;
+    }
+
+    .gallery__card:nth-last-of-type(2n) {
+        grid-column: span 1;
+    }
+
+
 
     
 }
