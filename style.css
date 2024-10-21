@@ -56,10 +56,34 @@ body {
 
 .nav__link {
     color: white;
-    text-decoration: none;
+    text-decoration: none !important;
     font-family: inherit;
     font-size: 20px;
     text-transform: capitalize;
+    position: relative;
+    transition: opacity 1s;
+}
+
+.nav__link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    border: 0 solid white;
+    transition: .3s;
+    
+}
+
+.nav__link:hover {
+    /*opacity: .1;*/
+}
+
+.nav__link:hover::after {
+    border: 1px solid white;
+    width: 100%;
+
+
 }
 
 .header__menu {
